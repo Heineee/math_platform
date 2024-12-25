@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Neon Admin Panel">
+	<meta name="author" content="">
+	
+	<title>Neon | Members</title>
+
+    <link rel="stylesheet" href="/static/css/jquery-ui-1.10.3.custom.min.css" />
+    <link rel="stylesheet" href="/static/css/entypo.css" />
+    <link rel="stylesheet" href="/static/css/css.css" />
+    <link rel="stylesheet" href="/static/css/bootstrap.css" />
+    <link rel="stylesheet" href="/static/css/neon-core.css" />
+    <link rel="stylesheet" href="/static/css/neon-theme.css" />
+    <link rel="stylesheet" href="/static/css/neon-forms.css" />
+    <link rel="stylesheet" href="/static/css/custom.css" />
+      
+      <script src="/static/js/jquery-1.11.0.min.js"></script>
+
+	<!--[if lt IE 9]><script src="assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+	
+	
+</head>
+<body class="page-body" data-url="http://neon.dev">
+
+<div class="page-container"><!-- add class "sidebar-collapsed" to close sidebar by default, "chat-visible" to make chat appear always -->	
+	
+	<div class="sidebar-menu">
+		
+			
+		<header class="logo-env">
+			
+			<!-- logo
+			<div class="logo">
+				<a href="index.html">
+					<img src="static/picture/logo@2x.png" width="120" alt="">
+				</a>
+			</div>
+			 -->
+						<!-- logo collapse icon -->
+						
+			<div class="sidebar-collapse">
+				<a href="#" class="sidebar-collapse-icon with-animation"><!-- add class "with-animation" if you want sidebar to have animation during expanding/collapsing transition -->
+					<i class="entypo-menu"></i>
+				</a>
+			</div>
+            
+			
+			<!-- open/close menu icon (do not remove if you want to enable menu on mobile devices) -->
+			<div class="sidebar-mobile-menu visible-xs">
+				<a href="#" class="with-animation"><!-- add class "with-animation" to support animation -->
+					<i class="entypo-menu"></i>
+				</a>
+			</div>
+			
+		</header>
+        
+				
+		<ul id="main-menu" class="">
+			<!-- add class "multiple-expanded" to allow multiple submenus to open -->
+			<!-- class "auto-inherit-active-class" will automatically add "active" class for parent elements who are marked already with class "active" -->
+			<!-- Search Bar -->
+			
+			
+{#            数据分析部分#}
+			<li>
+				<a href="/myApp/customer_analysis/">
+					<i class="entypo-doc-text"></i>
+					<span>数据分析</span>
+				</a>
+				<ul>
+					<li>
+						<a href="/myApp/customer_analysis">
+							<span>用户分析</span>
+						</a>
+					</li>
+					<li>
+						<a href="/myApp/customer_analysis">
+							<span>话题分析</span>
+						</a>
+					</li>
+					<li>
+						<a href="/myApp/customer_analysis">
+							<span>题目分析</span>
+						</a>
+					</li>
+				</ul>
+			</li>
+			
+			<li class="opened active">
+				<a href="/myApp/get_all_text/">">
+					<i class="entypo-bag"></i>
+					<span>信息处理</span>
+				</a>
+				<ul>
+                    
+					<li >
+						<a href="/myApp/get_all_text/">
+							<span>数据历史</span>
+							
+						</a>
+					</li>
+                    
+					<li class="active">
+						<a href="/myApp/check/">
+							<span>话题审核</span>
+						</a>
+					</li>
+					<li>
+						<a href="/myApp/check_text/">
+							<span>题目审批</span>
+						</a>
+					</li>
+                    
+				</ul>
+			</li>
+			
+		</ul>
+				
+	</div>	
+	<div class="main-content">
+		
+
+<hr>
+			<ol class="breadcrumb bc-3">
+						<li>
+				<i class="entypo-home"></i>主页
+			</li>
+					<li>
+							信息处理
+					</li>
+				<li class="active">
+			
+							<strong>话题审核</strong>
+					</li>
+					</ol>
+    
+
+<div >
+        <div class="row" >
+          <div class="col-md-12"  >
+            {% for i in c_page %}
+            <div class="member-entry" >
+            
+              <div class="member-details" >
+                <h4 >
+                  <a href="extra-timeline.html" >
+                    {% if i.answer|length > 200 %} {{ i.answer|slice:":200" }}
+                    {%else %} {{ i.text }} {% endif %}</a
+                  >
+                <p  id='2' style="display: none">{{ i.answer }}</p>
+{#                将内容隐藏#}
+                <div class="first_content" style="display: none">{{ i.text }}</div>
+                </h4>
+
+                <!-- Details with Icons -->
+                <div class="row info-list">
+                  <div class="col-sm-4"  >
+                    <i class="entypo-briefcase"></i>
+                      <a href="#" >题目:<p id='1'>{{ i.question_title }}</p></a>
+                      <div class="first_username" style="display: none">{{ i.text }}</div>
+                  </div>
+                
+                  <div class="col-sm-4">
+                    <i class="entypo-linkedin"></i>
+                        <button class="first_check">通过</button>
+                    </div>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+
+        <div class="row" style="display: flex; justify-content: center">
+          <ul class="pagination">
+            {% if c_page.has_previous %}
+            <li>
+              <a
+                href="/myApp/check?page={{ c_page.previous_page_number }}"
+              >
+                <i class="entypo-left-open-mini"></i>
+              </a>
+            </li>
+            {% endif%} {% for i in c_page.paginator.page_range %}
+            <li><a href="/myApp/check?page={{ i }}">{{ i }}</a></li>
+            {% endfor %} {% if c_page.has_next %}
+            <li>
+              <a href="/myApp/check?page={{ c_page.next_page_number }}">
+                <i class="entypo-right-open-mini"></i>
+              </a>
+            </li>
+            {% endif %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  
+</div>
+
+
+	<script src="/static/js/main-gsap.js"></script>
+	<script src="/static/js/jquery-ui-1.10.3.minimal.min.js"></script>
+	<script src="/static/js/bootstrap.js"></script>
+	<script src="/static/js/joinable.js"></script>
+	<script src="/static/js/resizeable.js"></script>
+	<script src="/static/js/neon-api.js"></script>
+	<script src="/static/js/neon-chat.js"></script>
+	<script src="/static/js/neon-custom.js"></script>
+	<script src="/static/js/neon-demo.js"></script>
+
+<script>
+{#读取第一个id为first-check的button#}
+
+    function fetchData(url, data) {
+  return fetch(url, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json;charset=utf-8",
+    },
+    body: JSON.stringify(data),
+  });
+}
+
+ 
+    let button = document.querySelector(".first_check");
+    button.addEventListener('click', async () => {
+        
+        var answer=document.getElementById('2').innerText;
+        const body = {answer};
+        const response = await fetchData("/myApp/check_text/", body);
+        const data = await response.json();
+        // 最关键的几步
+        if (data.success === 1) {
+            Swal.fire({
+                title: "审核成功",
+                icon: "success",
+                confirmButtonText: "确定",
+            });
+        }
+        else {
+            Swal.fire({
+                title: "保存失败",
+                icon: "error",
+                confirmButtonText: "确定",
+            });
+        }
+
+});
+    
+</script>
+
+</body>
+</html>

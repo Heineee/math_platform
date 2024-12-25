@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Neon Admin Panel">
+	<meta name="author" content="">
+	
+	<title>Neon | Charts</title>
+	
+
+	<link rel="stylesheet" href="/static/css/jquery-ui-1.10.3.custom.min.css">
+	<link rel="stylesheet" href="/static/css/entypo.css">
+	<link rel="stylesheet" href="/static/css/css.css">
+	<link rel="stylesheet" href="/static/css/bootstrap.css">
+	<link rel="stylesheet" href="/static/css/neon-core.css">
+	<link rel="stylesheet" href="/static/css/neon-theme.css">
+	<link rel="stylesheet" href="/static/css/neon-forms.css">
+	<link rel="stylesheet" href="/static/css/custom.css">
+
+	<script src="/static/js/jquery-1.11.0.min.js"></script>
+
+	<!--[if lt IE 9]><script src="assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+	
+	
+</head>
+<body class="page-body" data-url="http://neon.dev">
+
+<div class="page-container"><!-- add class "sidebar-collapsed" to close sidebar by default, "chat-visible" to make chat appear always -->	
+	
+	<div class="sidebar-menu">
+		
+			
+		<header class="logo-env">
+			
+			<!-- logo -->
+			<div class="logo">
+				<a href="index.html">
+					<img src="static/picture/logo@2x.png" width="120" alt="">
+				</a>
+			</div>
+			
+						<!-- logo collapse icon -->
+						
+			<div class="sidebar-collapse">
+				<a href="#" class="sidebar-collapse-icon with-animation"><!-- add class "with-animation" if you want sidebar to have animation during expanding/collapsing transition -->
+					<i class="entypo-menu"></i>
+				</a>
+			</div>
+			
+									
+			
+			<!-- open/close menu icon (do not remove if you want to enable menu on mobile devices) -->
+			<div class="sidebar-mobile-menu visible-xs">
+				<a href="#" class="with-animation"><!-- add class "with-animation" to support animation -->
+					<i class="entypo-menu"></i>
+				</a>
+			</div>
+			
+		</header>
+				
+				<ul id="main-menu" class="">
+			<!-- add class "multiple-expanded" to allow multiple submenus to open -->
+			<!-- class "auto-inherit-active-class" will automatically add "active" class for parent elements who are marked already with class "active" -->
+			<!-- Search Bar -->
+			
+			
+{#            数据分析部分#}
+			<li class="opened active">
+				<a href="/myApp/customer_analysis/">
+					<i class="entypo-doc-text"></i>
+					<span>数据分析</span>
+				</a>
+				<ul>
+					<li class="active">
+						<a href="/myApp/customer_analysis/">
+							<span>用户分析</span>
+						</a>
+					</li>
+					<li>
+						<a href="/myApp/customer_analysis/">
+							<span>话题分析</span>
+						</a>
+					</li>
+					<li>
+						<a href="/myApp/customer_analysis/">
+							<span>题目分析</span>
+						</a>
+					</li>
+				</ul>
+			</li>
+			
+			<li >
+				<a href="/myApp/get_all_text/">
+					<i class="entypo-bag"></i>
+					<span>信息处理</span>
+				</a>
+				<ul>
+                    
+					<li>
+						<a href="/myApp/get_all_text/">
+							<span>数据历史</span>
+						</a>
+					</li>
+                    
+					<li>
+						<a href="/myApp/check/">
+							<span>话题审核</span>
+						</a>
+					</li>
+					<li>
+						<a href="/myApp/check_text/">">
+							<span>题目审批</span>
+						</a>
+					</li>
+                    
+				</ul>
+			</li>
+			
+		</ul>
+				
+	</div>	
+		
+				
+		
+				
+			
+	<div class="main-content">
+		
+
+
+<hr>
+			<ol class="breadcrumb bc-3">
+						<li>
+				<a href="index.html"><i class="entypo-home"></i>主页</a>
+			</li>
+					<li class="active">
+			
+							<strong>可视化</strong>
+					</li>
+					</ol>
+
+<br>
+
+
+
+<div class="row">
+	<div class="col-md-12">
+		
+		<div class="panel panel-primary">
+			
+		
+			
+			<table class="table table-bordered" >
+				<tbody>
+					<tr>
+						<td width="50%" >
+							<strong>性别用户占比</strong>
+							<br>
+							<div id="chart10" style="height: 300px"></div>
+						</td>
+						<td>
+							<strong>IP地址分布</strong>
+							<br>
+							<div id="chart8" style="height: 300px"></div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			
+			<table class="table table-bordered">
+				<tbody>
+					<tr>
+						<td width="50%">
+							<strong>用户活跃度</strong>
+							<br>
+							
+							<div id="chart3" style="height: 250px"></div>
+						</td>
+						<td>
+							<strong>用户年龄段</strong>
+							<br>
+							<div id="chart4" style="height: 250px"></div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			
+			<table class="table table-bordered"  style="display: none">
+				<tbody>
+					<tr>
+						<td width="33%">
+							<strong>讨论热词</strong>
+							<br>
+							<div id="chart5" style="height: 250px"></div>
+						</td>
+						<td width="33%">
+							<strong>热门帖子</strong>
+							<br>
+							<div id="chart6" style="height: 250px"></div>
+						</td>
+						<td width="33%">
+							<strong>热门题目</strong>
+							<br>
+							<div id="chart7" style="height: 250px"></div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			
+			<table class="table table-bordered">
+				<tbody>
+					<tr>
+						<td>
+							<strong>用户积分排行</strong>
+							<br>
+							<div id="chart9" style="height: 300px"></div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		
+		</div>
+	
+	</div>
+</div>
+            
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+jQuery(document).ready(function($) 
+{
+	$('.inlinebar').sparkline('html', {type: 'bar', barColor: '#ff6264'} );
+	$('.inlinebar-2').sparkline('html', {type: 'bar', barColor: '#445982'} );
+	$('.inlinebar-3').sparkline('html', {type: 'bar', barColor: '#00b19d'} );
+	$('.bar-2').sparkline([ [1,4], [2, 3], [3, 2], [4, 1] ], { type: 'bar' });
+	$('.pie-2').sparkline('html', {type: 'pie',borderWidth: 0, sliceColors: ['#3d4554', '#ee4749','#00b19d']});
+	$('.linechart').sparkline();
+
+
+	$(".pie-large").sparkline([3,2,5], {
+		type: 'pie',
+		width: '150px ',
+		height: '150px',
+		sliceColors: ['#ee4749', '#c13638','#fe9193']
+		
+	});
+
+	$(".line-large").sparkline([5,6,7,9,10,5,3,4,5,4,6,7, ], {
+		type: 'line',
+		width: '320px ',
+		height: '150px',
+		lineColor: '#ff4e50',
+		highlightLineColor: '#ff8889',
+		highlightSpotColor: '#b22425',
+		minSpotColor: '#ff4e50',
+		maxSpotColor: '#ff4e50',
+		fillColor: '#f79696',
+		lineWidth: 2,
+		spotRadius: 4.5,
+		normalRangeColor: '#ed4949'
+	});
+
+
+	$(".bar-large").sparkline([5,6,7,2,1,0,4,3,5,7,2,4], {
+		type: 'bar',
+		barColor: '#ff6264',
+		height: '150px',
+		barWidth: 10,
+		barSpacing: 2
+	});			
+});
+</script>
+        
+	<link rel="stylesheet" href="/static/css/rickshaw.min.css">
+
+	<!-- Bottom Scripts -->
+	<script src="/static/js/main-gsap.js"></script>
+	<script src="/static/js/jquery-ui-1.10.3.minimal.min.js"></script>
+	<script src="/static/js/bootstrap.js"></script>
+	<script src="/static/js/joinable.js"></script>
+	<script src="/static/js/resizeable.js"></script>
+	<script src="/static/js/neon-api.js"></script>
+	<script src="/static/js/d3.v3.js"></script>
+	<script src="/static/js/rickshaw.min.js"></script>
+	<script src="/static/js/raphael-min.js"></script>
+	<script src="/static/js/morris.min.js"></script>
+	<script src="/static/js/jquery.peity.min.js"></script>
+	<script src="/static/js/neon-charts.js"></script>
+	<script src="/static/js/jquery.sparkline.min.js"></script>
+	<script src="/static/js/neon-chat.js"></script>
+	<script src="/static/js/neon-custom.js"></script>
+	<script src="/static/js/neon-demo.js"></script>
+<script src="/static/js/echarts.js"></script>
+<script src="/static/js/china.js"></script>
+
+<script>
+    var chartDom = document.getElementById('chart10');
+var myChart = echarts.init(chartDom);
+var option;
+
+  {#var data = gender.map(item => {#}
+  {#          return { value: item.value, name: item.name };#}
+  {#      });#}
+option = {
+  tooltip: {
+    trigger: 'item'
+  },
+  legend: {
+    top: '5%',
+    left: 'center'
+  },
+  series: [
+    {
+      name: 'Access From',
+      type: 'pie',
+      radius: ['40%', '70%'],
+      avoidLabelOverlap: false,
+      label: {
+        show: false,
+        position: 'center'
+      },
+      emphasis: {
+        label: {
+          show: true,
+          fontSize: 40,
+          fontWeight: 'bold'
+        }
+      },
+      labelLine: {
+        show: false
+      },
+      data: {{ gender | safe }},
+
+    }
+  ]
+};
+
+option && myChart.setOption(option);
+    
+</script>
+
+<script>
+    var chartDom = document.getElementById('chart8');
+    var myChart = echarts.init(chartDom);
+    var option = {
+
+            tooltip: {  //这里设置提示框
+                trigger: 'item',  //数据项图形触发
+                backgroundColor: "red",  //提示框浮层的背景颜色。
+                //字符串模板(地图): {a}（系列名称），{b}（区域名称），{c}（合并数值）,{d}（无）
+                formatter: '地区：{b}<br/>用户数量：{c}'
+            },
+            visualMap: {//视觉映射组件
+                top: 'center',
+                left: 'left',
+                min: 0,
+                max: 10,
+                text: ['High', 'Low'],
+                realtime: false,  //拖拽时，是否实时更新
+                calculable: true,  //是否显示拖拽用的手柄
+                inRange: {
+                    color: ['lightskyblue', 'yellow', 'orangered']
+                }
+            },
+            series: [
+                {
+                    name: '模拟数据',
+                    type: 'map',
+                    mapType: 'china',
+                    roam: false,//是否开启鼠标缩放和平移漫游
+                    itemStyle: {//地图区域的多边形 图形样式
+                        normal: {//是图形在默认状态下的样式
+                            label: {
+                                show: true,//是否显示标签
+                                textStyle: {
+                                    color: "black"
+                                }
+                            }
+                        },
+                        zoom: 1.5,  //地图缩放比例,默认为1
+                        emphasis: {//是图形在高亮状态下的样式,比如在鼠标悬浮或者图例联动高亮时
+                            label: { show: true }
+                        }
+                    },
+                    top: "3%",//组件距离容器的距离
+                    data:{{ address | safe }}
+                }
+            ]
+        };
+        // 使用刚指定的配置项和数据显示图表。
+ option && myChart.setOption(option);
+</script>
+<script>
+    var chartDom = document.getElementById('chart3');
+var myChart = echarts.init(chartDom);
+var option;
+
+let base = +new Date(2024, 8, 1);
+let oneDay = 24 * 3600 * 1000;
+{#设置随机种子#}
+let seed = 5;
+let data = [[base, Math.random(seed) * 300]];
+
+for (let i = 1; i < 40; i++) {
+  let now = new Date((base += oneDay));
+  data.push([+now, Math.round((Math.random() - 0.5) * 20 + data[i - 1][1])]);
+}
+option = {
+  tooltip: {
+    trigger: 'axis',
+    position: function (pt) {
+      return [pt[0], '10%'];
+    }
+  },
+  {#toolbox: {#}
+  {#  feature: {#}
+  {#    dataZoom: {#}
+  {#      yAxisIndex: 'none'#}
+  {#    },#}
+  {#    restore: {},#}
+  {#    saveAsImage: {}#}
+  {#  }#}
+
+  xAxis: {
+    type: 'time',
+    boundaryGap: false
+  },
+  yAxis: {
+    type: 'value',
+    boundaryGap: [0, '100%']
+  },
+  dataZoom: [
+    {
+      type: 'inside',
+      start: 0,
+      end: 20
+    },
+    {
+      start: 0,
+      end: 20
+    }
+  ],
+  series: [
+    {
+      name: '用户在线数量',
+      type: 'line',
+      smooth: true,
+      symbol: 'none',
+      areaStyle: {},
+      data: data
+    }
+  ]
+};
+
+option && myChart.setOption(option);
+
+
+</script>
+
+<script>
+            var chartDom = document.getElementById('chart4');
+            var myChart = echarts.init(chartDom);
+var option;
+
+option = {
+  xAxis: {
+    type: 'category',
+    data: ["15以下","15-20","20-25","25-30","30-40","40-50","50以上"]
+  },
+  yAxis: {
+    type: 'value'
+  },
+  series: [
+    {
+      data: {{ age | safe }},
+      type: 'bar'
+    }
+  ]
+};
+
+option && myChart.setOption(option);
+        </script>
+        
+        
+        
+   <script>
+            var chartDom = document.getElementById('chart9');
+            var myChart = echarts.init(chartDom);
+            var option;
+            const colors = ['#5470C6', '#91CC75', '#EE6666'];
+option = {
+  color: colors,
+  tooltip: {
+    trigger: 'axis',
+    axisPointer: {
+      type: 'cross'
+    }
+  },
+  grid: {
+    right: '20%'
+  },
+
+  legend: {
+    data: ['人数', '占比']
+  },
+  xAxis: [
+    {
+      type: 'category',
+      axisTick: {
+        alignWithLabel: true
+      },
+      // prettier-ignore
+      data: ["<1250","1250-1300","1300-1350","1350-1400","1400-1450","1450-1500","1500-1550","1550-1600","1600-1650","1650-1700","1700-1750","1750-1800","1800-1850","1850-1900","1900-1950","1950-2000",
+       "2000-2050","2050-2100","2100-2150","2150-2200","2200-2250","2250-2300","2300-2350","2350-2400","2400+"]
+    }
+  ],
+  yAxis: [
+    {
+      type: 'value',
+      name: '人数',
+      position: 'right',
+      alignTicks: true,
+      axisLine: {
+        show: true,
+        lineStyle: {
+          color: colors[0]
+        }
+      },
+      axisLabel: {
+        formatter: '{value}'
+      }
+    },
+
+    {
+      type: 'value',
+      name: '占比',
+      position: 'left',
+      alignTicks: true,
+      axisLine: {
+        show: true,
+        lineStyle: {
+          color: colors[1]
+        }
+      },
+      axisLabel: {
+        formatter: '{value} %'
+      }
+    }
+  ],
+  series: [
+    {
+      name: 'Evaporation',
+      type: 'bar',
+      data: {{ score | safe }}
+    },
+    {
+      name: 'Precipitation',
+      type: 'line',
+      yAxisIndex: 1,
+      data:{{ scores2 | safe }}
+    },
+
+  ]
+};
+option && myChart.setOption(option);
+   </script>
+
+        
+        
+        
+        
+        
+        
+  
+        
+        
+        <script>
+            var chartDom = document.getElementById('chart5');
+            var myChart = echarts.init(chartDom);
+            var option;
+
+option = {
+    series: [{
+        type: 'wordCloud',
+        gridSize: 2, // 控制网格大小
+        sizeRange: [12, 50], // 字体大小范围
+        rotationRange: [-90, 90], // 旋转范围
+        shape: 'pentagon', // 形状
+        width: 600,
+        height: 400,
+        drawOutOfBound: true, // 超出画布是否绘制
+        textStyle: {
+            normal: {
+                color: function () { // 字体颜色随机
+                    return 'rgb(' + [
+                        Math.round(Math.random() * 160),
+                        Math.round(Math.random() * 160),
+                        Math.round(Math.random() * 160)
+                    ].join(',') + ')';
+                }
+            }
+        },
+        data: [
+           {name: 'Example', value: 10000},
+           {name: 'ECharts', value: 6181},
+           {name: 'Word Cloud', value: 4386},
+           {name: 'JavaScript', value: 4055},
+           {name: 'Data Visualization', value: 2467},
+           // 更多的数据...
+        ]
+    }]
+};
+
+option && myChart.setOption(option);
+    </script>
+
+
+
+</body>
+</html>

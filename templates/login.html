@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"
+    />
+
+    <title>注册登录界面</title>
+    <link rel="stylesheet" href="/static/css/login.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11.3.0/dist/sweetalert2.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="container" id="container">
+      <div class="form-box">
+        <!-- 注册 -->
+        <div class="register-box hidden">
+          <h1>register</h1>
+          <input type="text" id='username' placeholder="用户名(3~20位)" />
+          <input type="email" id="email" placeholder="邮箱/重置密码请输入注册邮箱" />
+          <input type="password" id="password" placeholder="密码(10~20位)" />
+          <input type="password" placeholder="确认密码(10~20位)" />
+          <button>注册</button>
+          <div id="check-error"></div>
+        </div>
+
+        <!-- 登录 -->
+        <div class="login-box">
+          <h1>login</h1>
+          <input type="text" placeholder="用户名" />
+          <input type="password"  placeholder="密码" />
+          <input type="text" placeholder="管理员识别码(普通用户不填)" />
+          <button>登录</button>
+          <div id="login-error"></div>
+        </div>
+      </div>
+
+      <div class="con-box left">
+        <h2>
+          <!-- welcome to MathNexus 其中mathnexus换行-->
+          欢迎来到<br /><span>MathNexus</span>
+        </h2>
+        <p>探索你的定制化<span>学习乐园</span>,<br />现在就开始！</p>
+        <img src="/static/picture/高斯.jpg" alt="" />
+        <p>已有账号</p>
+        <button id="login">去登录</button>
+      </div>
+      <div class="con-box right">
+        <h2>欢迎来到<br /><span>MathNexus</span></h2>
+        <p>立即拥抱你的<span>个性化学习</span>吧</p>
+        <img src="/static/picture/大佬云集图.jpg" alt="" />
+        <p>没有账号？/忘记密码</p>
+        <button id="register">去注册/重置密码</button>
+      </div>
+    </div>
+    <div class="square">
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+    <div class="circle">
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+    <!-- 加载动画 -->
+    <div class="loader" id="loader">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="overlay" id="overlay"></div>
+
+    <script type="text/javascript" src="/static/js/login.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.3.0/dist/sweetalert2.min.js"></script>
+  </body>
+</html>

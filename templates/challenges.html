@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>刷题网站</title>
+    <link rel="stylesheet" href="/static/css/challenges.css">
+    <link rel="stylesheet" href="/static/css/profile.css"> <!-- 引入CSS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS_HTML"></script>
+  <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11.3.0/dist/sweetalert2.min.css"
+    />
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="/static/picture/logo.png" alt="Logo" width="100">
+                <div class="title-container"> <!-- 新的容器 -->
+                    <h1 class="site-name">Mathnexus</h1> <!-- 大标题 -->
+                    <h3 class="subtitle">COMPUTING, EXERCISE AND COMMUNICATION</h3> <!-- 小标题 -->
+                </div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/myApp/homepage/">主页</a></li>
+                <li class="dropdown">
+                    <a href="/myApp/matrix_compute/" class="dropbtn">科学计算器</a>
+                    <div class="dropdown-content">
+                        <a href="/myApp/function_progress/">微积分</a>
+                        <a href="/myApp/plot/">绘图</a>
+                        <a href="/myApp/matrix_compute/">矩阵计算</a>
+                    </div>
+                </li>
+                <li><a href="/myApp/challenges/">刷题挑战</a></li>
+                <li><a href="/myApp/forum/">讨论区</a></li>
+                <li><a href="/myApp/trending/">热门榜</a></li>
+                <li><a href="/myApp/resources/">其他相关网站</a></li>
+                <li><a href="/myApp/profile/">个人中心</a></li>
+            </ul><br>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>题目列表</h2>
+            <ul id="challenge-list">
+                <li>
+                    <a href="/myApp/question1/">题目 1: Permutation Powers</a>
+                    <p><math xmlns="http://www.w3.org/1998/Math/MathML"><mtext>Find </mtext><mi>P</mi><mo>(</mo><mn>100</mn><mo>)</mo><mo>.</mo><mtext> Give your answer modulo </mtext><mo>(</mo><msup><mn>10</mn><mn>9</mn></msup><mo>+</mo><mn>7</mn><mo>)</mo><mo>.</mo></math>
+                    </p>
+                </li>
+                <li>
+                    <a href="/myApp/question2/">题目 2: Bounded Binary Search</a>
+                    <p>Find \(\displaystyle \sum_{d=0}^7 \sum_{N=1}^{7^{10}} Q(N, d)\).</p>
+                </li>
+                <li>
+                    <a href="/myApp/question3/">题目 3: Blancmange Function Problem</a>
+                    <p>Find \( F(10^{18} + 31, 10^{14} + 31, 62) \). Give your answer modulo \( 1\,000\,062\,031 \).</p>
+                </li>
+                <li>
+                    <a href="/myApp/question4/">题目 4: Nested Radical Pair Problem</a>
+                    <p>Find \( H(10^{15}) \). Give your answer modulo \( 1031^3 + 2 \).</p>
+                </li>
+                 
+                <li>
+                    <h2>提交解答</h2>
+                    <form id="questionForm">
+                        <div class="form-group">
+                            <label for="question-select">请选择题目:</label>
+                            <select id="question-select" name="question">
+                                <option value="">请选择题目</option>
+                                <option value="first">第一题</option>
+                                <option value="second">第二题</option>
+                                <option value="third">第三题</option>
+                                <option value="fourth">第四题</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="title">输入解答</label>
+                            <textarea id="title" name="title" rows="4" placeholder="请输入解答..."></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="attachment">上传附件:</label>
+                            <input type="file" id="attachment" name="attachment" accept="image/*,.doc,.docx">
+                        </div>
+                        <div class="form-group">
+                            <button type="submit">提交解答</button>
+                        </div>
+                    </form>
+                    <div id="successMessage" class="success-message" style="display:none;">提交成功！</div>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+
+
+    <footer>
+        <div class="footer-content">
+            <p>探索知识的无限可能，尽在我们的网站。无论是通过科学计算器解决复杂数学问题，还是在刷题挑战中提升解题技能，我们提供全面的学习工具。加入我们的讨论区，与志同道合的朋友交流思想，共同进步。关注热门榜，把握最新的学习动态和趋势。拓展视野，通过其他相关网站发现更多资源。最后，不要忘记访问您的个人中心，管理您的学习旅程和成就。我们致力于构建一个互动、互助的学习环境，让您的每一次访问都充满价值。</p>
+            <p>&copy; Mathnexus designed by Double JI</p>
+        </div>
+    </footer>
+
+    <script src="/static/js/challenges.js"></script>
+    <script>
+        MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+    </script>
+
+<script>
+    function fetchData(url, data) {
+  return fetch(url, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json;charset=utf-8",
+    },
+    body: JSON.stringify(data),
+  });
+}
+    let submit=document.querySelector('button');
+    submit.addEventListener('click',async ()=>{
+        
+        let question=document.querySelector('select').value;
+        let title=document.querySelector('textarea').value;
+        {#let attachment=document.querySelector('input').files[0];#}
+        const body={question,title};
+        const response=await fetchData('/myApp/challenges/',body);
+        const data = await response.json();
+          if (data.success === 1) {
+        Swal.fire({
+      title: "提交成功",
+      icon: "success",
+      confirmButtonText: "确定",
+    });
+    } });
+</script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.3.0/dist/sweetalert2.min.js"></script>
+  
+</body>
+</html>

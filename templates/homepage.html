@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>功能主页</title>
+    <link rel="stylesheet" href="/static/css/homepage.css">
+{#    <link rel="stylesheet" href="/static/css/profile.css"> <!-- 引入CSS -->#}
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="/static/picture/logo.png" alt="Logo" width="100">
+                <div class="title-container"> <!-- 新的容器 -->
+                    <h1 class="site-name">Mathnexus</h1> <!-- 大标题 -->
+                    <h3 class="subtitle">COMPUTING, EXERCISE AND COMMUNICATION</h3> <!-- 小标题 -->
+                </div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/myApp/homepage/">主页</a></li>
+                <li class="dropdown">
+                    <a href="/myApp/matrix_compute/" class="dropbtn">科学计算器</a>
+                    <div class="dropdown-content">
+                        <a href="/myApp/function_progress/">微积分</a>
+                        <a href="/myApp/plot/">绘图</a>
+                        <a href="/myApp/matrix_compute/">矩阵计算</a>
+                    </div>
+                </li>
+                <li><a href="/myApp/challenges/">刷题挑战</a></li>
+                <li><a href="/myApp/forum/">讨论区</a></li>
+                <li><a href="/myApp/trending/">热门榜</a></li>
+                <li><a href="/myApp/resources/">其他相关网站</a></li>
+                <li><a href="/myApp/profile/">个人中心</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="box">
+            <h2>科学计算器</h2>
+            <p>提供强大的数学计算功能，支持各种复杂数学运算，是解决科学计算问题的理想工具。</p>
+            <a href="/myApp/matrix_compute/">进入</a>
+        </div>
+        <div class="box">
+            <h2>刷题挑战</h2>
+            <p>精心设计的题目库，通过每日挑战和定时测试，帮助用户巩固知识，提升解题技巧，享受学习的乐趣。</p>
+            <a href="/myApp/challenges/">进入</a>
+        </div>
+        <div class="box">
+            <h2>讨论区</h2>
+            <p>一个开放的交流平台，用户可以在这里分享学习心得、讨论问题、交流想法，构建一个互助互学的学习社区。</p>
+            <a href="/myApp/forum/">进入</a>
+        </div>
+        <div class="box">
+            <h2>热门榜</h2>
+            <p>展示当前最受欢迎和讨论度最高的内容，包括热门话题、热门文章和热门活动，让用户紧跟潮流，不错过任何精彩。</p>
+            <a href="/myApp/trending/">进入</a>
+        </div>
+        <div class="box">
+            <h2>其他相关网站</h2>
+            <p>汇集了与本站主题相关的外部资源链接，为用户提供更广泛的信息来源和学习材料，拓展知识视野。</p>
+            <a href="/myApp/resources/">进入</a>
+        </div>
+        <div class="box">
+            <h2>个人中心</h2>
+            <p>用户可以在这里查看个人资料、管理账户设置、跟踪学习进度和成就，是个性化服务和自我管理的中心。</p>
+            <a href="/myApp/profile/">进入</a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>探索知识的无限可能，尽在我们的网站。无论是通过科学计算器解决复杂数学问题，还是在刷题挑战中提升解题技能，我们提供全面的学习工具。加入我们的讨论区，与志同道合的朋友交流思想，共同进步。关注热门榜，把握最新的学习动态和趋势。拓展视野，通过其他相关网站发现更多资源。最后，不要忘记访问您的个人中心，管理您的学习旅程和成就。我们致力于构建一个互动、互助的学习环境，让您的每一次访问都充满价值。</p>
+            <p>&copy; Mathnexus designed by Double JI</p>
+        </div>
+    </footer>
+</body>
+</html>

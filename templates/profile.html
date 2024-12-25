@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数学刷题挑战 - 个人主页</title>
+     <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11.3.0/dist/sweetalert2.min.css"
+    />
+    <link rel="stylesheet" href="/static/css/profile.css"> <!-- 引入CSS -->
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="/static/picture/logo.png" alt="Logo" width="100">
+                <div class="title-container"> <!-- 新的容器 -->
+                    <h1 class="site-name">Mathnexus</h1> <!-- 大标题 -->
+                    <h3 class="subtitle">COMPUTING, EXERCISE AND COMMUNICATION</h3> <!-- 小标题 -->
+                </div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/myApp/homepage/">主页</a></li>
+                <li class="dropdown">
+                    <a href="/myApp/matrix_compute/" class="dropbtn">科学计算器</a>
+                    <div class="dropdown-content">
+                        <a href="/myApp/function_progress/">微积分</a>
+                        <a href="/myApp/plot/">绘图</a>
+                        <a href="/myApp/matrix_compute/">矩阵计算</a>
+                    </div>
+                </li>
+                <li><a href="/myApp/challenges/">刷题挑战</a></li>
+                <li><a href="/myApp/forum/">讨论区</a></li>
+                <li><a href="/myApp/trending/">热门榜</a></li>
+                <li><a href="/myApp/resources/">其他相关网站</a></li>
+                <li><a href="/myApp/profile/">个人中心</a></li>
+            </ul><br>
+        </nav>
+    </header>
+
+
+<div class="container">
+    <!-- 基本信息部分 -->
+    <div class="profile-section">
+        <h2>基本信息</h2>
+        <img src="/static/picture/logo.png" alt="头像" class="avatar"/> <!-- 替换为你的图片 -->
+        <p>昵称: <input type="text" class="input-field" id="nickname" value="{{ username }}"/></p>
+        <p>性别: 
+            <select class="input-field" id="gender" >
+            <option value="">请选择性别</option>
+                <option value="男" {% if gender == '男' %}selected{% endif %}>男</option>
+                <option value="女" {% if gender == '女' %}selected{% endif %}>女</option>
+            </select>
+        </p>
+        <p>生日: <input type="date" class="input-field" id="birthday" value="{{ birthday }}"/></p>
+        <p>地址: 
+            <select class="input-field" id="address">
+                <option value="">请选择省份</option>
+                <option value="北京" {% if address == '北京' %}selected{% endif %}>北京</option>
+                <option value="天津" {% if address == '天津' %}selected{% endif %}>天津</option>
+                <option value="河北" {% if address == '河北' %}selected{% endif %}>河北</option>
+                <option value="山西" {% if address == '山西' %}selected{% endif %}>山西</option>
+                <option value="内蒙古" {% if address == '内蒙古' %}selected{% endif %}>内蒙古</option>
+                <option value="辽宁" {% if address == '辽宁' %}selected{% endif %}>辽宁</option>
+                <option value="吉林" {% if address == '吉林' %}selected{% endif %}>吉林</option>
+                <option value="黑龙江" {% if address == '黑龙江' %}selected{% endif %}>黑龙江</option>
+                <option value="上海" {% if address == '上海' %}selected{% endif %}>上海</option>
+                <option value="江苏" {% if address == '江苏' %}selected{% endif %}>江苏</option>
+                <option value="浙江" {% if address == '浙江' %}selected{% endif %}>浙江</option>
+                <option value="安徽" {% if address == '安徽' %}selected{% endif %}>安徽</option>
+                <option value="福建" {% if address == '福建' %}selected{% endif %}>福建</option>
+                <option value="江西" {% if address == '江西' %}selected{% endif %}>江西</option>
+                <option value="山东" {% if address == '山东' %}selected{% endif %}>山东</option>
+                <option value="河南" {% if address == '河南' %}selected{% endif %}>河南</option>
+                <option value="湖北" {% if address == '湖北' %}selected{% endif %}>湖北</option>
+                <option value="湖南" {% if address == '湖南' %}selected{% endif %}>湖南</option>
+                <option value="广东" {% if address == '广东' %}selected{% endif %}>广东</option>
+                <option value="广西" {% if address == '广西' %}selected{% endif %}>广西</option>
+                <option value="海南" {% if address == '海南' %}selected{% endif %}>海南</option>
+                <option value="重庆" {% if address == '重庆' %}selected{% endif %}>重庆</option>
+                <option value="四川" {% if address == '四川' %}selected{% endif %}>四川</option>
+                <option value="贵州" {% if address == '贵州' %}selected{% endif %}>贵州</option>
+                <option value="云南" {% if address == '云南' %}selected{% endif %}>云南</option>
+                <option value="西藏" {% if address == '西藏' %}selected{% endif %}>西藏</option>
+                <option value="陕西" {% if address == '陕西' %}selected{% endif %}>陕西</option>
+                <option value="甘肃" {% if address == '甘肃' %}selected{% endif %}>甘肃</option>
+                <option value="青海" {% if address == '青海' %}selected{% endif %}>青海</option>
+                <option value="宁夏" {% if address == '宁夏' %}selected{% endif %}>宁夏</option>
+                <option value="新疆" {% if address == '新疆' %}selected{% endif %}>新疆</option>
+                <option value="香港" {% if address == '香港' %}selected{% endif %}>香港</option>
+                <option value="澳门" {% if address == '澳门' %}selected{% endif %}>澳门</option>
+                <option value="台湾" {% if address == '台湾' %}selected{% endif %}>台湾</option>
+            </select>
+        </p>
+        <p>邮箱: <input type="email" class="input-field" id="email" value="{{ email }}"/></p>
+        <button class="save-btn" id="save-profile-button">保存</button>
+    </div>
+
+    <!-- 挑战区部分 -->
+    <div class="challenge-section">
+{#        <h2>挑战区 <button class="update-btn" onclick="updateChallengeData()">更新</button></h2>#}
+        <h2>挑战区 </h2>
+
+        <p>当前完成的题目数量: <span id="completed-questions">{{ answer_num }}</span></p>
+        <p>当前刷题数排名: <span id="ranking">第10名</span></p>
+        <p>我已完成的题目: <a href="/myApp/self-challenges/">查看</a></p>
+    </div>
+
+    <!-- 讨论区部分 -->
+    <div class="discussion-section">
+{#        点击链接到profile页面#}
+{#        <h2>讨论区 <button class="update-btn" onclick="updateDiscussionData()">更新</button></h2>#}
+
+                <h2>讨论区 </h2>
+        <p>我发过的帖子数量: <span id="post-count">{{ post_num }}</span></p>
+        <p>我收获的点赞总数: <span id="likes-count">{{ post_like.sum }}</span></p>
+{#        <p>收到的回复数: <span id="replies-count">12</span></p>#}
+        <p>我发送的帖子: <a href="/myApp/forum/">查看</a></p>
+    </div>
+</div>
+
+
+<footer>
+    <div class="footer-content">
+        <p>探索知识的无限可能，尽在我们的网站。无论是通过科学计算器解决复杂数学问题，还是在刷题挑战中提升解题技能，我们提供全面的学习工具。加入我们的讨论区，与志同道合的朋友交流思想，共同进步。关注热门榜，把握最新的学习动态和趋势。拓展视野，通过其他相关网站发现更多资源。最后，不要忘记访问您的个人中心，管理您的学习旅程和成就。我们致力于构建一个互动、互助的学习环境，让您的每一次访问都充满价值。</p>
+        <p>&copy; Mathnexus designed by Double JI</p>
+    </div>
+</footer>
+<script src="/static/js/profile.js"></script> <!-- 引入JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.3.0/dist/sweetalert2.min.js"></script>
+ 
+
+</body>
+</html>

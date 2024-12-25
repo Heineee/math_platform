@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>函数微积分计算r</title>
+    <link rel="stylesheet" href="/static/css/function_progress.css">
+    <link rel="stylesheet" href="/static/css/profile.css"> <!-- 引入CSS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.6.4/math.min.js"></script>
+</head>
+
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="/static/picture/logo.png" alt="Logo" width="100">
+                <div class="title-container"> <!-- 新的容器 -->
+                    <h1 class="site-name">Mathnexus</h1> <!-- 大标题 -->
+                    <h3 class="subtitle">COMPUTING, EXERCISE AND COMMUNICATION</h3> <!-- 小标题 -->
+                </div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/myApp/homepage/">主页</a></li>
+                <li class="dropdown">
+                    <a href="/myApp/matrix_compute/" class="dropbtn">科学计算器</a>
+                    <div class="dropdown-content">
+                        <a href="/myApp/function_progress/">微积分</a>
+                        <a href="/myApp/plot/">绘图</a>
+                        <a href="/myApp/matrix_compute/">矩阵计算</a>
+                    </div>
+                </li>
+                <li><a href="/myApp/challenges/">刷题挑战</a></li>
+                <li><a href="/myApp/forum/">讨论区</a></li>
+                <li><a href="/myApp/trending/">热门榜</a></li>
+                <li><a href="/myApp/resources/">其他相关网站</a></li>
+                <li><a href="/myApp/profile/">个人中心</a></li>
+            </ul><br>
+        </nav>
+    </header>
+
+      <div class="container">
+        <h1>微积分计算器</h1>
+        <label for="functionInput">请使用LATEX语法输入一个函数:</label>
+        <input type="text" id="functionInput" placeholder="e.g., x^2 + 3x + 2">
+
+        <label for="operationSelect">计算选项</label>
+        <select id="operationSelect">
+            <option value="integral">计算给定上下限积分</option>
+            <option value="derivative">计算给定点的微分</option>
+        </select>
+
+        <div id="integralInputs">
+            <label for="lowerLimit">下限:</label>
+            <input type="number" id="lowerLimit" step="any">
+            <label for="upperLimit">上限:</label>
+            <input type="number" id="upperLimit" step="any">
+        </div>
+
+        <div id="derivativeInputs" class="hidden">
+            <label for="derivativePoint">微分点</label>
+            <input type="number" id="derivativePoint" step="any">
+        </div>
+
+        <button id="calculateButton">计算</button>
+
+        <div id="result">
+            <h2>结果为:</h2>
+            <input type="text" id="resultOutput" readonly>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <p>探索知识的无限可能，尽在我们的网站。无论是通过科学计算器解决复杂数学问题，还是在刷题挑战中提升解题技能，我们提供全面的学习工具。加入我们的讨论区，与志同道合的朋友交流思想，共同进步。关注热门榜，把握最新的学习动态和趋势。拓展视野，通过其他相关网站发现更多资源。最后，不要忘记访问您的个人中心，管理您的学习旅程和成就。我们致力于构建一个互动、互助的学习环境，让您的每一次访问都充满价值。</p>
+            <p>&copy; Mathnexus designed by Double JI</p>
+        </div>
+    </footer>
+    
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
+    <script src="/static/js/function_progress.js"></script>
+</body>
+</html>

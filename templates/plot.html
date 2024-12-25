@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>函数绘图</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <link rel="stylesheet" href="/static/css/plot.css">
+   <link rel="stylesheet" href="/static/css/profile.css"> <!-- 引入CSS -->
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="/static/picture/logo.png" alt="Logo" width="100">
+                <div class="title-container"> <!-- 新的容器 -->
+                    <h1 class="site-name">Mathnexus</h1> <!-- 大标题 -->
+                    <h3 class="subtitle">COMPUTING, EXERCISE AND COMMUNICATION</h3> <!-- 小标题 -->
+                </div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/myApp/homepage/">主页</a></li>
+                <li class="dropdown">
+                    <a href="/myApp/matrix_compute./" class="dropbtn">科学计算器</a>
+                    <div class="dropdown-content">
+                        <a href="/myApp/function_progress/">微积分</a>
+                        <a href="/myApp/plot/">绘图</a>
+                        <a href="/myApp/matrix_compute/">矩阵计算</a>
+                    </div>
+                </li>
+                <li><a href="/myApp/challenges/">刷题挑战</a></li>
+                <li><a href="/myApp/forum/">讨论区</a></li>
+                <li><a href="/myApp/trending/">热门榜</a></li>
+                <li><a href="/myApp/resources/">其他相关网站</a></li>
+                <li><a href="/myApp/profile/">个人中心</a></li>
+            </ul><br>
+        </nav>
+    </header>
+
+    <h1 align="center">函数绘图</h1>
+    <div align="center">
+        <label for="functionInput">请使用LATEX语法输入一个函数:</label>
+        <input type="text" id="functionInput" placeholder="x^0.5">
+        <button onclick="plotFunction()">绘制函数图像</button>
+    </div>
+    
+    <canvas id="plotCanvas" width="800" height="600"></canvas>
+    <p></p><br>
+    <p></p>
+    <footer>
+        <div class="footer-content">
+            <p>探索知识的无限可能，尽在我们的网站。无论是通过科学计算器解决复杂数学问题，还是在刷题挑战中提升解题技能，我们提供全面的学习工具。加入我们的讨论区，与志同道合的朋友交流思想，共同进步。关注热门榜，把握最新的学习动态和趋势。拓展视野，通过其他相关网站发现更多资源。最后，不要忘记访问您的个人中心，管理您的学习旅程和成就。我们致力于构建一个互动、互助的学习环境，让您的每一次访问都充满价值。</p>
+            <p>&copy; Mathnexus designed by Double JI</p>
+        </div>
+    </footer>
+
+       
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
+    <script src="/static/js/fish_script.js"></script>
+    <script src="/static/js/plot.js"></script>
+    <script src="/static/js/header_script.js"></script>  
+</body>
+</html>

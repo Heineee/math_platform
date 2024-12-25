@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Neon Admin Panel">
+	<meta name="author" content="">
+	
+	<title>Neon | Members</title>
+	
+
+
+
+    <link rel="stylesheet" href="/static/css/jquery-ui-1.10.3.custom.min.css" />
+    <link rel="stylesheet" href="/static/css/entypo.css" />
+    <link rel="stylesheet" href="/static/css/css.css" />
+    <link rel="stylesheet" href="/static/css/bootstrap.css" />
+    <link rel="stylesheet" href="/static/css/neon-core.css" />
+    <link rel="stylesheet" href="/static/css/neon-theme.css" />
+    <link rel="stylesheet" href="/static/css/neon-forms.css" />
+    <link rel="stylesheet" href="/static/css/custom.css" />
+      
+      <script src="/static/js/jquery-1.11.0.min.js"></script>
+
+	<!--[if lt IE 9]><script src="assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+	
+	
+</head>
+<body class="page-body" data-url="http://neon.dev">
+
+<div class="page-container"><!-- add class "sidebar-collapsed" to close sidebar by default, "chat-visible" to make chat appear always -->	
+	
+	<div class="sidebar-menu">
+		
+			
+		<header class="logo-env">
+			
+			<!-- logo
+			<div class="logo">
+				<a href="index.html">
+					<img src="static/picture/logo@2x.png" width="120" alt="">
+				</a>
+			</div>
+			 -->
+						<!-- logo collapse icon -->
+						
+			<div class="sidebar-collapse">
+				<a href="#" class="sidebar-collapse-icon with-animation"><!-- add class "with-animation" if you want sidebar to have animation during expanding/collapsing transition -->
+					<i class="entypo-menu"></i>
+				</a>
+			</div>
+            
+			
+			<!-- open/close menu icon (do not remove if you want to enable menu on mobile devices) -->
+			<div class="sidebar-mobile-menu visible-xs">
+				<a href="#" class="with-animation"><!-- add class "with-animation" to support animation -->
+					<i class="entypo-menu"></i>
+				</a>
+			</div>
+			
+		</header>
+        
+				
+		<ul id="main-menu" class="">
+			<!-- add class "multiple-expanded" to allow multiple submenus to open -->
+			<!-- class "auto-inherit-active-class" will automatically add "active" class for parent elements who are marked already with class "active" -->
+			<!-- Search Bar -->
+			<li id="search">
+				<form method="get" action="">
+					<input type="text" name="q" class="search-input" placeholder="Search something...">
+					<button type="submit">
+						<i class="entypo-search"></i>
+					</button>
+				</form>
+			</li>
+			<li>
+				<a href="index.html">
+					<i class="entypo-gauge"></i>
+					<span>Dashboard</span>
+				</a>
+				
+			</li>
+			
+			<li>
+				<a href="index.html" target="_blank">
+					<i class="entypo-monitor"></i>
+					<span>Frontend</span>
+				</a>
+			</li>
+			
+			<li>
+				<a href="forms-main.html">
+					<i class="entypo-doc-text"></i>
+					<span>数据分析</span>
+				</a>
+				<ul>
+					<li>
+						<a href="/myApp/customer_analysis">">
+							<span>用户分析</span>
+						</a>
+					</li>
+					<li>
+						<a href="/myApp/topic_analysis">">
+							<span>话题分析</span>
+						</a>
+					</li>
+					<li>
+						<a href="/myApp/problem_analysis">
+							<span>题目分析</span>
+						</a>
+					</li>
+				</ul>
+			</li>
+			
+			<li class="opened active">
+				<a href="extra-icons.html">
+					<i class="entypo-bag"></i>
+					<span>Extra</span>
+					<span class="badge badge-info badge-roundless">New Items</span>
+				</a>
+				<ul>
+					<li>
+						<a href="extra-icons.html">
+							<span>Icons</span>
+							<span class="badge badge-success">3</span>
+						</a>
+						<ul>
+							<li>
+								<a href="extra-icons.html">
+									<span>Font Awesome</span>
+								</a>
+							</li>
+							<li>
+								<a href="extra-icons-entypo.html">
+									<span>Entypo</span>
+								</a>
+							</li>
+							<li>
+								<a href="extra-icons-glyphicons.html">
+									<span>Glyph Icons</span>
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="extra-portlets.html">
+							<span>Portlets</span>
+						</a>
+					</li>
+					<li>
+						<a href="extra-google-maps.html">
+							<span>Maps</span>
+						</a>
+						<ul>
+							
+							<li>
+								<a href="extra-vector-maps.html">
+									<span>Vector Maps</span>
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="extra-chat-api.html">
+							<span>Chat API</span>
+						</a>
+					</li>
+					<li>
+						<a href="extra-calendar.html">
+							<span>Calendar</span>
+						</a>
+					</li>
+					
+			
+					
+					<li class="active">
+						<a href="">
+							<span>数据历史</span>
+							<span class="badge badge-secondary badge-roundless">New</span>
+						</a>
+					</li>
+					<li>
+						<a href="extra-gallery.html">
+							<span>Gallery</span>
+						</a>
+						<ul>
+							<li>
+								<a href="extra-gallery.html">
+									<span>Albums</span>
+								</a>
+							</li>
+							<li>
+								<a href="extra-gallery-single.html">
+									<span>Single Album</span>
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="extra-profile.html">
+							<span>Profile</span>
+						</a>
+					</li>
+					
+					<li>
+						<a href="extra-blank-page.html">
+							<span>Blank Page</span>
+						</a>
+					</li>
+					<li>
+						<a href="extra-timeline.html">
+							<span>Timeline</span>
+						</a>
+					</li>
+					<li>
+						<a href="extra-comments.html">
+							<span>Comments</span>
+							<span class="badge badge-secondary badge-roundless">New</span>
+						</a>
+					</li>
+					<li>
+						<a href="extra-timeline-centered.html">
+							<span>Timeline Centered</span>
+						</a>
+					</li>
+					<li>
+						<a href="extra-tocify.html">
+							<span>Tocify</span>
+						</a>
+					</li>
+					<li>
+						<a href="ui-notifications.html">
+							<span>Notifications</span>
+						</a>
+					</li>
+					
+					
+				</ul>
+			</li>
+			<li>
+				<a href="charts.html">
+					<i class="entypo-chart-bar"></i>
+					<span>Charts</span>
+				</a>
+			</li>
+			
+		</ul>
+				
+	</div>	
+	<div class="main-content">
+		
+
+<hr>
+			<ol class="breadcrumb bc-3">
+						<li>
+				<a href="index.html"><i class="entypo-home"></i>Home</a>
+			</li>
+					<li>
+			
+							<a href="extra-icons.html">Extra</a>
+					</li>
+				<li class="active">
+			
+							<strong>Members</strong>
+					</li>
+					</ol>
+			
+<div class="row">
+	<div class="col-md-9 col-sm-7">
+		<h2>Members</h2>
+	</div>
+	
+	<div class="col-md-3 col-sm-5">
+		
+		<form method="get" role="form" class="search-form-full">
+		
+			<div class="form-group">
+				<input type="text" class="form-control" name="s" id="search-input" placeholder="Search...">
+				<i class="entypo-search"></i>
+			</div>
+			
+		</form>
+		
+	</div>
+</div>
+
+<div >
+        <div class="row" >
+          <div class="col-md-12"  >
+            {% for i in c_page %}
+            <div class="member-entry" >
+
+              <div class="member-details" >
+                <h4>
+                  <a href="extra-timeline.html">
+                    {% if i.text|length > 200 %} {{ i.text|slice:":200" }}
+                    {%else %} {{ i.text }} {% endif %}</a
+                  >
+                </h4>
+
+                <!-- Details with Icons -->
+                <div class="row info-list">
+                  <div class="col-sm-4">
+                    <i class="entypo-briefcase"></i>
+                    <a href="#">作者:{{ i.username }}</a>
+                  </div>
+
+                  <div class="col-sm-4">
+                    <i class="entypo-twitter"></i>
+                    <a href="#">点赞:{{i.likes}}  </a>
+                  </div>
+
+                  <div class="col-sm-4">
+                    <i class="entypo-facebook"></i>
+                    <a href="#">
+                    反对:{{ i.dislikes }}
+
+                    </a>
+                  </div>
+
+                  <div class="clear"></div>
+
+                  <div class="col-sm-4">
+                    <i class="entypo-location"></i>
+                    <a href="#"
+                      >{% if i.likes and i.dislikes%} 好评率: {{ i.likes }} /
+                      ({{ i.likes|add:i.dislikes }} * 100)% {% else %} 好评率:0%
+                      {% endif %}</a
+                    >
+                  </div>
+
+                  <div class="col-sm-4">
+                    <i class="entypo-mail"></i>
+                    <a href="#">浏览量:{{ i.viewers }}</a>
+                  </div>
+
+                  <div class="col-sm-4">
+                    <i class="entypo-linkedin"></i>
+                    <a href="#">J{% if i.recommended_developer %} 开发者推荐 {% else %}
+                      开发者未推荐 {% endif %}</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+
+        <div class="row" style="display: flex; justify-content: center">
+          <ul class="pagination">
+            {% if c_page.has_previous %}
+            <li>
+              <a
+                href="/myApp/get_all_text?page={{ c_page.previous_page_number }}"
+              >
+                <i class="entypo-left-open-mini"></i>
+              </a>
+            </li>
+            {% endif%} {% for i in c_page.paginator.page_range %}
+            <li><a href="/myApp/get_all_text?page={{ i }}">{{ i }}</a></li>
+            {% endfor %} {% if c_page.has_next %}
+            <li>
+              <a href="/myApp/get_all_text?page={{ c_page.next_page_number }}">
+                <i class="entypo-right-open-mini"></i>
+              </a>
+            </li>
+            {% endif %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  
+</div>
+	
+	
+<div id="chat" class="fixed" data-current-user="Art Ramadani" data-order-by-status="1" data-max-chat-history="25">
+	
+	<div class="chat-inner">
+	
+		
+		<h2 class="chat-header">
+			<a href="#" class="chat-close" data-animate="1"><i class="entypo-cancel"></i></a>
+			
+			<i class="entypo-users"></i>
+			Chat
+			<span class="badge badge-success is-hidden">0</span>
+		</h2>
+		
+		
+		<div class="chat-group" id="group-1">
+			<strong>Favorites</strong>
+			
+			<a href="#" id="sample-user-123" data-conversation-history="#sample_history"><span class="user-status is-online"></span> <em>Catherine J. Watkins</em></a>
+			<a href="#"><span class="user-status is-online"></span> <em>Nicholas R. Walker</em></a>
+			<a href="#"><span class="user-status is-busy"></span> <em>Susan J. Best</em></a>
+			<a href="#"><span class="user-status is-offline"></span> <em>Brandon S. Young</em></a>
+			<a href="#"><span class="user-status is-idle"></span> <em>Fernando G. Olson</em></a>
+		</div>
+		
+		
+		<div class="chat-group" id="group-2">
+			<strong>Work</strong>
+			
+			<a href="#"><span class="user-status is-offline"></span> <em>Robert J. Garcia</em></a>
+			<a href="#" data-conversation-history="#sample_history_2"><span class="user-status is-offline"></span> <em>Daniel A. Pena</em></a>
+			<a href="#"><span class="user-status is-busy"></span> <em>Rodrigo E. Lozano</em></a>
+		</div>
+		
+		
+		<div class="chat-group" id="group-3">
+			<strong>Social</strong>
+			
+			<a href="#"><span class="user-status is-busy"></span> <em>Velma G. Pearson</em></a>
+			<a href="#"><span class="user-status is-offline"></span> <em>Margaret R. Dedmon</em></a>
+			<a href="#"><span class="user-status is-online"></span> <em>Kathleen M. Canales</em></a>
+			<a href="#"><span class="user-status is-offline"></span> <em>Tracy J. Rodriguez</em></a>
+		</div>
+	
+	</div>
+	
+	<!-- conversation template -->
+	<div class="chat-conversation">
+		
+		<div class="conversation-header">
+			<a href="#" class="conversation-close"><i class="entypo-cancel"></i></a>
+			
+			<span class="user-status"></span>
+			<span class="display-name"></span> 
+			<small></small>
+		</div>
+		
+		<ul class="conversation-body">	
+		</ul>
+		
+		<div class="chat-textarea">
+			<textarea class="form-control autogrow" placeholder="Type your message"></textarea>
+		</div>
+		
+	</div>
+	
+</div>
+	</div>
+
+
+
+
+	<!-- Bottom Scripts -->
+
+	
+	<script src="/static/js/main-gsap.js"></script>
+	<script src="/static/js/jquery-ui-1.10.3.minimal.min.js"></script>
+	<script src="/static/js/bootstrap.js"></script>
+	<script src="/static/js/joinable.js"></script>
+	<script src="/static/js/resizeable.js"></script>
+	<script src="/static/js/neon-api.js"></script>
+	<script src="/static/js/neon-chat.js"></script>
+	<script src="/static/js/neon-custom.js"></script>
+	<script src="/static/js/neon-demo.js"></script>
+
+</body>
+</html>

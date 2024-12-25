@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Determine a Secret Number</title>
+    <link rel="stylesheet" href="/static/css/question.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="/static/picture/logo.png" alt="Logo" width="100">
+                <div class="title-container"> <!-- 新的容器 -->
+                    <h1 class="site-name">Mathnexus</h1> <!-- 大标题 -->
+                    <h3 class="subtitle">COMPUTING, EXERCISE AND COMMUNICATION</h3> <!-- 小标题 -->
+                </div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/myApp/homepage/">主页</a></li>
+                <li class="dropdown">
+                    <a href="/myApp/matrix_compute/" class="dropbtn">科学计算器</a>
+                    <div class="dropdown-content">
+                        <a href="/myApp/function_progress/">微积分</a>
+                        <a href="/myApp/plot/">绘图</a>
+                        <a href="/myApp/matrix_compute/">矩阵计算</a>
+                    </div>
+                </li>
+                <li><a href="/myApp/challenges/">刷题挑战</a></li>
+                <li><a href="/myApp/forum/">讨论区</a></li>
+                <li><a href="/myApp/trending/">热门榜</a></li>
+                <li><a href="/myApp/resources/">其他相关网站</a></li>
+                <li><a href="/myApp/profile/">个人中心</a></li>
+            </ul><br>
+        </nav>
+    </header>
+    <h2>Determine a Secret Number</h2>
+    <p>Consider the problem of determining a secret number from a set \(\{1, ..., N\}\) <br>by repeatedly choosing a number \(y\) and asking "Is the secret number greater than \(y\)?".</p>
+
+    <p>If \(N=1\) then no questions need to be asked. <br>If \(N=2\) then only one question needs to be asked.<br> If \(N=64\) then six questions need to be asked. <br>However, in the latter case if the secret number is \(1\) then six questions still need to be asked. <br>We want to restrict the number of questions asked for small values.</p>
+
+    <p>Let \(Q(N, d)\) be the least number of questions needed for a strategy that can find any secret number from the set \(\{1, ..., N\}\) <br>where no more than \(x + d\) questions are needed to find the secret value \(x\).</p>
+
+    <p>It can be proved that \(Q(N, 0) = N - 1\). You are also given \(Q(7, 1) = 3\) and \(Q(777, 2) = 10\).</p>
+
+    <p>Find \(\displaystyle \sum_{d=0}^7 \sum_{N=1}^{7^{10}} Q(N, d)\).</p>
+
+    <footer>
+        <div class="footer-content">
+            <p>探索知识的无限可能，尽在我们的网站。无论是通过科学计算器解决复杂数学问题，还是在刷题挑战中提升解题技能，我们提供全面的学习工具。加入我们的讨论区，与志同道合的朋友交流思想，共同进步。关注热门榜，把握最新的学习动态和趋势。拓展视野，通过其他相关网站发现更多资源。最后，不要忘记访问您的个人中心，管理您的学习旅程和成就。我们致力于构建一个互动、互助的学习环境，让您的每一次访问都充满价值。</p>
+            <p>&copy; Mathnexus designed by Double JI</p>
+        </div>
+    </footer>
+</body>
+</html>

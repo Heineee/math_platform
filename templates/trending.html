@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>热门榜网站</title>
+    <link rel="stylesheet" href="/static/css/trending.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="/static/picture/logo.png" alt="Logo" width="100">
+                <div class="title-container"> <!-- 新的容器 -->
+                    <h1 class="site-name">Mathnexus</h1> <!-- 大标题 -->
+                    <h3 class="subtitle">COMPUTING, EXERCISE AND COMMUNICATION</h3> <!-- 小标题 -->
+                </div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/myApp/homepage/">主页</a></li>
+                <li class="dropdown">
+                    <a href="/myApp/matrix_compute/" class="dropbtn">科学计算器</a>
+                    <div class="dropdown-content">
+                        <a href="/myApp/function_progress/">微积分</a>
+                        <a href="/myApp/plot/">绘图</a>
+                        <a href="/myApp/matrix_compute/">矩阵计算</a>
+                    </div>
+                </li>
+                <li><a href="/myApp/challenges/">刷题挑战</a></li>
+                <li><a href="/myApp/forum/">讨论区</a></li>
+                <li><a href="/myApp/trending/">热门榜</a></li>
+                <li><a href="/myApp/resources/">其他相关网站</a></li>
+                <li><a href="/myApp/profile/">个人中心</a></li>
+            </ul><br>
+        </nav>
+    </header>
+<div class="container">
+    <h1>热门榜</h1>
+
+    <div class="section">
+        <h2>热门帖子讨论区</h2>
+        <div class="post" data-link="post1.html">
+{#            <h3><a href="/myApp/post1/">帖子标题 1</a></h3>#}
+{#            <p>帖子内容简要描述...</p>#}
+            <h3 id="1"> <a id='4' href="/myApp/{{ post_text_first.title }}">{{  post_text_first.title }}</a></h3>
+            <p>{{ post_text_first.text}}</p>
+            <p>时间：{{ post_text_first.date }}，浏览量：{{ post_text_first.viewers }}，</p>
+            <p><button>点赞</button>{{ post_text_first.likes }}，
+            <button>踩</button>{{ post_text_first.dislikes }}</p>
+        </div>
+        <div class="post" data-link="post2.html">
+{#            <h3><a href="/myApp/post2/">帖子标题 2</a></h3>#}
+{#            <p>帖子内容简要描述...</p>#}
+            <h3  id="2"> <a id="5" href="/myApp/{{ post_text_second.title }}">{{  post_text_second.title }}</a></h3>
+            <p>{{ post_text_second.text}},</p>
+            <p>时间：{{ post_text_second.date }}，浏览量：{{ post_text_second.viewers }}，</p>
+            <p><button>点赞</button>{{ post_text_second.likes }}，
+            <button>踩</button>{{ post_text_second.dislikes }}</p>
+        </div>
+        <div class="post" data-link="post3.html">
+
+{#            a的链接为post_text_third.title#}
+            <h3  id="3"> <a id="6"  href="/myApp/{{ post_text_third.title }}/">{{  post_text_third.title }}</a></h3>
+            <p>{{ post_text_third.text}}</p>
+            <p>时间：{{ post_text_third.date }}，浏览量：{{ post_text_third.viewers }}，</p>
+            <p><button>点赞</button>{{ post_text_third.likes }}，
+            <button>踩</button>{{ post_text_third.dislikes }}</p>
+            
+        </div>
+        <!-- 可以继续添加更多帖子 -->
+    </div>
+
+    <div class="section">
+        <h2>当前热门题目</h2>
+        <div class="topic" data-link="topic1.html">
+            <h3><a href="/myApp/question1/">题目 1</a></h3>
+            <p><math xmlns="http://www.w3.org/1998/Math/MathML"><mtext>Find </mtext><mi>P</mi><mo>(</mo><mn>100</mn><mo>)</mo><mo>.</mo><mtext> Give your answer modulo </mtext><mo>(</mo><msup><mn>10</mn><mn>9</mn></msup><mo>+</mo><mn>7</mn><mo>)</mo><mo>.</mo></math>
+                    </p>
+        </div>
+        <div class="topic" data-link="topic2.html">
+            <h3><a href="/myApp/question2/">题目 2</a></h3>
+            <p>Find \(\displaystyle \sum_{d=0}^7 \sum_{N=1}^{7^{10}} Q(N, d)\).</p>
+                
+        </div>
+        <div class="topic" data-link="topic3.html">
+            <h3><a href="/myApp/question3/">题目 3</a></h3>
+             <p>Find \( F(10^{18} + 31, 10^{14} + 31, 62) \). Give your answer modulo \( 1\,000\,062\,031 \).</p>
+                
+        </div>
+        <!-- 可以继续添加更多题目 -->
+    </div>
+
+</div>
+
+<footer>
+    <div class="footer-content">
+        <p>探索知识的无限可能，尽在我们的网站。无论是通过科学计算器解决复杂数学问题，还是在刷题挑战中提升解题技能，我们提供全面的学习工具。加入我们的讨论区，与志同道合的朋友交流思想，共同进步。关注热门榜，把握最新的学习动态和趋势。拓展视野，通过其他相关网站发现更多资源。最后，不要忘记访问您的个人中心，管理您的学习旅程和成就。我们致力于构建一个互动、互助的学习环境，让您的每一次访问都充满价值。</p>
+        <p>&copy; Mathnexus designed by Double JI</p>
+    </div>
+</footer>
+  <script>
+        MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+    </script>
+<script src="/static/js/trending.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS_HTML"></script>
+<script>
+    function fetchData(url, data) {
+  return fetch(url, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json;charset=utf-8",
+    },
+    body: JSON.stringify(data),
+  });
+}
+   let button0 = document.querySelectorAll('button')[0];
+    let button1 = document.querySelectorAll('button')[1];
+    let button2 = document.querySelectorAll('button')[2];
+    let button3 = document.querySelectorAll('button')[3];
+    let button4 = document.querySelectorAll('button')[4];
+    let button5 = document.querySelectorAll('button')[5];
+
+    let a=document.getElementById('4');
+    let b=document.getElementById('5');
+    let c=document.getElementById('6');
+    button0.addEventListener('click', async ()=> {
+        let title= document.getElementById('1').innerText;
+        const body={title,target:'like'};
+        alert(title);
+        let response = await fetchData('/myApp/trending/', body);
+        let result = await response.json();
+        if (result.success) {
+            alert('点赞成功！');
+        }
+    });
+    button1.addEventListener('click', async ()=> {
+        let title= document.getElementById('1').innerText;
+        const body={title,target:'dislike'};
+        let response = await fetchData('/myApp/trending/', body);
+        let result = await response.json();
+        if (result.success) {
+            alert('讨厌成功！');
+        }
+    });
+    button2.addEventListener('click',
+    async ()=> {
+        let title= document.getElementById('2').innerText;
+        const body={title,target:'like'};
+        let response = await fetchData('/myApp/trending/', body);
+        let result = await response.json();
+        if (result.success) {
+            alert('浏览成功！');
+        }
+    });
+    button3.addEventListener('click', async ()=> {
+        let title= document.getElementById('2').innerText;
+        const body={title,target:'dislike'};
+        let response = await fetchData('/myApp/trending/', body);
+        let result = await response.json();
+        if (result.success) {
+            alert('点赞成功！');
+        }
+    });
+
+    button4.addEventListener('click', async ()=> {
+            let title= document.getElementById('3').innerText;
+            const body={title,target:'like'};
+            let response = await fetchData('/myApp/trending/', body);
+            let result = await response.json();
+            if (result.success) {
+                alert('点赞成功！');
+            }
+    });
+    button5.addEventListener('click', async ()=> {
+
+        let title= document.getElementById('3').innerText;
+        const body={title,target:'dislike'};
+        let response = await fetchData('/myApp/trending/', body);
+        let result = await response.json();
+        if (result.success) {
+            alert('踩成功！');
+    }
+    });
+    a.addEventListener('click', async ()=> {
+        let title= document.getElementById('4').innerText;
+        const body={title,target:'view'};
+        let response = await fetchData('/myApp/trending/', body);
+        let result = await response.json();
+
+    });
+    b.addEventListener('click', async ()=> {
+        let title= document.getElementById('5').innerText;
+        const body={title,target:'view'};
+        let response = await fetchData('/myApp/trending/', body);
+        let result = await response.json();
+
+    });
+    c.addEventListener('click', async ()=> {
+        let title= document.getElementById('6').innerText;
+        const body={title,target:'view'};
+        let response = await fetchData('/myApp/trending/', body);
+        let result = await response.json();
+
+    });
+</script>
+</body>
+</html>

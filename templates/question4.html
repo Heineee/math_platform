@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nested Radical Pair Problem</title>
+    <!-- Load MathJax -->
+    <link rel="stylesheet" href="question.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS_HTML"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="/static/picture/logo.png" alt="Logo" width="100">
+                <div class="title-container"> <!-- 新的容器 -->
+                    <h1 class="site-name">Mathnexus</h1> <!-- 大标题 -->
+                    <h3 class="subtitle">COMPUTING, EXERCISE AND COMMUNICATION</h3> <!-- 小标题 -->
+                </div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/myApp/homepage/">主页</a></li>
+                <li class="dropdown">
+                    <a href="/myApp/matrix_compute/" class="dropbtn">科学计算器</a>
+                    <div class="dropdown-content">
+                        <a href="/myApp/function_progress/">微积分</a>
+                        <a href="/myApp/plot/">绘图</a>
+                        <a href="/myApp/matrix_compute/">矩阵计算</a>
+                    </div>
+                </li>
+                <li><a href="/myApp/challenges/">刷题挑战</a></li>
+                <li><a href="/myApp/forum/">讨论区</a></li>
+                <li><a href="/myApp/trending/">热门榜</a></li>
+                <li><a href="/myApp/resources/">其他相关网站</a></li>
+                <li><a href="/myApp/profile/">个人中心</a></li>
+            </ul><br>
+        </nav>
+    </header>
+
+    <h2>Nested Radical Pair Problem</h2>
+    <p>
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <mo>(</mo>
+            <mi>x</mi>
+            <mo>,</mo>
+            <mi>y</mi>
+            <mo>)</mo>
+        </math>
+        is called a <i>nested radical pair</i> if <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <mi>x</mi>
+            <mo>&#xA0;</mo>
+            <mo>and</mo>
+            <mo>&#xA0;</mo>
+            <mi>y</mi>
+        </math>
+        are non-zero integers such that <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <mfrac>
+                <mi>x</mi>
+                <mi>y</mi>
+            </mfrac>
+            <mo>is&#xA0;</mo>
+            <mo>not&#xA0;</mo>
+            <mo>a&#xA0;</mo>
+            <mo>cube</mo>
+            <mo>of&#xA0;</mo>
+            <mo>a&#xA0;</mo>
+            <mi>rational</mi>
+            <mi>number</mi>
+        </math>, and there exist integers <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <mi>a</mi>
+            <mo>,</mo>
+            <mo>&#xA0;</mo>
+            <mi>b</mi>
+            <mo>&#xA0;</mo>
+            <mo>and</mo>
+            <mo>&#xA0;</mo>
+            <mi>c</mi>
+        </math>
+        such that:
+    </p>
+    \[
+    \sqrt{\sqrt[3]{x}+\sqrt[3]{y}}=\sqrt[3]{a}+\sqrt[3]{b}+\sqrt[3]{c}
+    \]
+    <p>For example, both (-4,125) and (5,5324) are nested radical pairs:</p>
+    \[
+    \begin{align*}
+    \sqrt{\sqrt[3]{-4}+\sqrt[3]{125}} &= \sqrt[3]{-1}+\sqrt[3]{2}+\sqrt[3]{4}\\
+    \sqrt{\sqrt[3]{5}+\sqrt[3]{5324}} &= \sqrt[3]{-2}+\sqrt[3]{20}+\sqrt[3]{25}
+    \end{align*}
+    \]
+    <p>Let \( H(N) \) be the sum of \( |x| + |y| \) for all the nested radical pairs \( (x, y) \) where \( |x| \leq |y| \leq N \).</p>
+    <p>For example, \( H(10^3) = 2535 \).</p>
+    <p>Find \( H(10^{15}) \). Give your answer modulo \( 1031^3 + 2 \).</p>
+
+    <footer>
+        <div class="footer-content">
+            <p>探索知识的无限可能，尽在我们的网站。无论是通过科学计算器解决复杂数学问题，还是在刷题挑战中提升解题技能，我们提供全面的学习工具。加入我们的讨论区，与志同道合的朋友交流思想，共同进步。关注热门榜，把握最新的学习动态和趋势。拓展视野，通过其他相关网站发现更多资源。最后，不要忘记访问您的个人中心，管理您的学习旅程和成就。我们致力于构建一个互动、互助的学习环境，让您的每一次访问都充满价值。</p>
+            <p>&copy; Mathnexus designed by Double JI</p>
+        </div>
+    </footer>
+</body>
+</html>
