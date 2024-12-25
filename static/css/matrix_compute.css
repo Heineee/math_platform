@@ -1,0 +1,262 @@
+/* General Styles */
+body {
+    
+    justify-content: center;
+    align-items: center;
+}
+
+html, body{
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    position: relative; /* 让绝对定位的子元素相对于 body 定位 */
+    font-family: Arial, sans-serif;
+  }
+
+header {
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 20px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-left: 50px; /* Logo的左边距 */
+}
+
+.logo img {
+    margin-right: 10px;
+}
+
+.title-container {
+    display: flex; /* 使用flex布局 */
+    align-items: center; /* 垂直居中对齐 */
+}
+
+.site-name {
+    font-size: 32px; /* 大标题的字体大小 */
+    color: #333;
+    margin-right: 10px; /* 大标题的右边距 */
+}
+
+.subtitle {
+    font-size: 16px; /* 小标题的字体大小 */
+    color: #666; /* 小标题的颜色 */
+    margin: 0; /* 小标题的边距 */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #e74c3c;
+}
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+.container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 80%;
+    max-width: 900px;
+    margin: 20px auto;
+    text-align: center;
+    
+}
+
+h1, h3, h4 {
+    text-align: center;
+    color: #333333;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+/* Matrix Section */
+.matrix-section {
+    margin-bottom: 30px;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.input-group {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.input-group label {
+    margin: 0 10px;
+    font-size: 14px;
+}
+
+input[type="number"] {
+    width: 60px;
+    padding: 5px;
+    font-size: 14px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    text-align: center;
+    margin: 0 5px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.generate-button {
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+/* Matrix Container */
+.matrix-container {
+    display: grid;
+    gap: 10px;
+    justify-content: center;
+}
+
+.matrix-container input {
+    width: 50px;
+    text-align: center;
+}
+
+/* Operation Section */
+.operation-section {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+select {
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+}
+
+.calculate-button {
+    margin-left: 10px;
+}
+
+/* Result Section */
+.result-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.matrix-result {
+    width: 48%;
+    padding: 10px;
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    min-height: 150px;
+}
+
+.matrix-result h4 {
+    margin: 0;
+    padding-bottom: 10px;
+    color: #333;
+}
+
+.matrix-result p {
+    font-size: 14px;
+    color: #666;
+    margin: 10px 0 0;
+}
+
+@media (max-width: 768px) {
+    .result-container {
+        flex-direction: column;
+    }
+    
+    .matrix-result {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+footer {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    width: 70%; /* footer-content 的宽度 */
+    margin: 0 auto;
+}
+
+.footer-content p {
+    margin: 5px 0;
+}

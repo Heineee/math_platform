@@ -1,0 +1,206 @@
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9; /* 白色色调背景 */
+    color: #333;
+}
+
+
+
+.header-nav-item {
+    /* 添加您希望的样式，比如： */
+    margin: 0; /* 示例 */
+    padding: 0; /* 示例 */
+    /* 其他样式 */
+}
+
+/* 可能还需要为整个header或navbar添加样式，以确保没有main中的样式影响它们 */
+.navbar {
+    /* 样式定义 */
+}
+
+
+header {
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 20px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-left: 50px; /* Logo的左边距 */
+}
+
+.logo img {
+    margin-right: 10px;
+}
+
+.title-container {
+    display: flex; /* 使用flex布局 */
+    align-items: center; /* 垂直居中对齐 */
+}
+
+.site-name {
+    font-size: 32px; /* 大标题的字体大小 */
+    color: #333;
+    margin-right: 10px; /* 大标题的右边距 */
+}
+
+.subtitle {
+    font-size: 16px; /* 小标题的字体大小 */
+    color: #666; /* 小标题的颜色 */
+    margin: 0; /* 小标题的边距 */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #e74c3c;
+}
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+
+
+
+
+
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #333;
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile-section, .challenge-section, .discussion-section {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: block;
+    margin: 10px auto;
+}
+
+p {
+    line-height: 1.6;
+}
+
+a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.update-btn, .save-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-top: 10px; /* 为保存按钮添加顶部间距 */
+}
+
+.update-btn:hover, .save-btn:hover {
+    background-color: #45a049;
+}
+
+.input-field {
+    display: block;
+    margin: 10px 0;
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+
+
+footer {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    width: 70%; /* footer-content 的宽度 */
+    margin: 0 auto;
+}
+
+.footer-content p {
+    margin: 5px 0;
+}
