@@ -2,6 +2,9 @@
 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Python Version](https://img.shields.io/badge/Python-3.8%2B-blue)](https://www.python.org/)
+[![JavaScript](https://img.shields.io/badge/JavaScript-ES6%2B-yellow)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![HTML5](https://img.shields.io/badge/HTML5-Latest-orange)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+[![CSS3](https://img.shields.io/badge/CSS3-Sass/SCSS-blueviolet)](https://developer.mozilla.org/en-US/docs/Web/CSS)
 
 **Math Platform** 是一个基于Python构建的数学计算与算法实现平台，提供高效的数值计算、符号运算及数据可视化功能。项目采用模块化设计，支持快速扩展数学算法和应用场景。
 
