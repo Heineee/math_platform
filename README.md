@@ -94,17 +94,8 @@ math_platform/
 ├── .gitignore               # Git忽略配置
 └── README.md                # 项目说明文档
 ```
-# 致谢
+## 致谢
 
 本项目的发展离不开以下贡献者的支持：
 
-## 核心开发者
-- [@Heineee](https://github.com/Heineee) - 项目创始人
 
-## 代码贡献者
-- [@Contributor1](链接) - 优化矩阵计算模块
-- [@Contributor2](链接) - 新增可视化组件
-
-## 特别感谢
-- [NumPy](https://numpy.org/) 提供基础数学运算支持
-- [Matplotlib](https://matplotlib.org/) 提供可视化方案
