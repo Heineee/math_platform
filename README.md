@@ -94,7 +94,7 @@ math_platform/
 ├── .gitignore               # Git忽略配置
 └── README.md                # 项目说明文档
 ```
-## 致谢
+## 🤝 致谢
 
 本项目的发展离不开以下贡献者的支持：
 
