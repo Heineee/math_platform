@@ -7,8 +7,8 @@
 [![CSS3](https://img.shields.io/badge/CSS3-Sass/SCSS-blueviolet)](https://developer.mozilla.org/en-US/docs/Web/CSS)
 
 **Math Platform** 是一个基于Python构建的数学计算与算法实现平台，提供高效的数值计算、符号运算及数据可视化功能。项目采用模块化设计，支持快速扩展数学算法和应用场景。
-TIPS:如今的大模型设计简单的网页和构建简单的程序代码已非常完善，合理有效利用大模型prompt可以加速学习，事半功倍。
 ---
+tips:的大模型设计简单的网页和构建简单的程序代码已非常完善，合理有效利用大模型prompt可以加速学习，事半功倍。
 
 ## 目录
 - [✨ 功能特性](#-功能特性)
